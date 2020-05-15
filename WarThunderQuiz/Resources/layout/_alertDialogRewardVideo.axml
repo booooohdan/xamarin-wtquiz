@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/_MMTopLevel"
+            android:id="@+id/levelNameLinear"
+            android:layout_height="match_parent">
+    <TextView
+        android:text="Use extra life to continue?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="#ffffffff" 
+        app:fontFamily="@font/cavolini"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/_MMBottomLevel"
+            >
+                <ImageButton
+            android:src="@drawable/_videoIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RewardButtonYes"
+            android:background="@android:color/transparent" />
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:id="@+id/progressBarVideoAd"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:progressBackgroundTint="#ffffccbc"
+            android:progressTint="#ffd60000" />
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

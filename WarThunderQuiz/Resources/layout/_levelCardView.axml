@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/_MMTopLevel"
+            android:id="@+id/levelNameLinear"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:text="Battle of Kursk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/levelNameTextView"
+                android:textSize="16sp"
+                android:textColor="#ffffffff"
+                app:fontFamily="@font/cavolini"
+                android:paddingLeft="20dp"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+                <TextView
+                    android:text="Level  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffffff"
+                    app:fontFamily="@font/cavolini"/>
+                <TextView
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/levelNumberTextView"
+                    android:textSize="16sp"
+                    android:textColor="#ffffffff"
+                    app:fontFamily="@font/cavolini"
+                    android:paddingRight="20dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/_MMBottomLevel"
+            android:id="@+id/linearContainer"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:id="@+id/containerOne"
+                android:gravity="center">
+                <ImageView
+                    android:src="@drawable/__atlanticMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mapImageView"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:layout_gravity="center"
+                android:id="@+id/containerTwo">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:src="@drawable/_flagEmpty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/leftFlagImageView1"
+                        android:adjustViewBounds="true"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp" />
+                    <ImageView
+                        android:src="@drawable/_flagUSSR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/leftFlagImageView2"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/_flagEmpty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/leftFlagImageView3"
+                        android:adjustViewBounds="true"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"/>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:text="VS"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        app:fontFamily="@font/cavolini"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:src="@drawable/_flagBritain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rightFlagImageView1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:src="@drawable/_flagEmpty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rightFlagImageView2"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/_flagFrance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rightFlagImageView3"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:adjustViewBounds="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="33"
+                android:id="@+id/containerThree"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="60"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="15"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="30">
+                        <ImageView
+                            android:src="@drawable/_tank"
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/vehicleTypeImageView1"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true" />
+                        <ImageView
+                            android:src="@drawable/_tank"
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/vehicleTypeImageView2"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    android:gravity="center">
+                    <TextView
+                        android:text="14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/levelScoreTextView"
+                        android:textSize="35sp"
+                        app:fontFamily="@font/cavolini"
+                        android:textColor="#ffd60000" />
+                    <TextView
+                        android:text="/"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="35sp"
+                        android:id="@+id/levelScoreDividerTextView"
+                        app:fontFamily="@font/cavolini"
+                        android:textColor="#ffd60000" />
+                    <TextView
+                        android:text="15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/levelTotalScoreTextView"
+                        android:textSize="35sp"
+                        app:fontFamily="@font/cavolini"
+                        android:textColor="#ffd60000" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

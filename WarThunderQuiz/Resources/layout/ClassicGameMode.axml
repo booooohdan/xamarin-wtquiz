@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:background="@drawable/_ShowResultMenuBackground">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/linearLayoutTopBar"
+        android:layout_weight="10"
+        android:background="#d60000">
+        <ImageView
+            android:src="@drawable/_hintPoints"
+            android:layout_height="match_parent"
+            android:id="@+id/imageHintpoints"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center|right"
+            android:layout_width="0dp"
+            android:layout_weight="16"/>
+        <TextView
+            android:text="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textHintpoints"
+            android:layout_weight="14"
+            android:gravity="center|left"
+            android:textSize="20sp"
+            android:textColor="#ffffffff"
+            app:fontFamily="@font/cavolini"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linearQuestionCount"
+            android:layout_weight="34"
+            android:gravity="center">
+            <TextView
+                android:text="11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textCurrentQuetion"
+                android:gravity="right|center"
+                android:textSize="20sp"
+                android:textColor="#ffffffff"
+                app:fontFamily="@font/cavolini"/>
+            <TextView
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#ffffffff"
+                app:fontFamily="@font/cavolini"/>
+
+            <TextView
+                android:text="20"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textTotalQuesion"
+                android:gravity="left|center"
+                android:textSize="20sp"
+                android:textColor="#ffffffff"
+                app:fontFamily="@font/cavolini"/>
+        </LinearLayout>
+        <TextView
+            android:text="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textCorrectAnswer"
+            android:layout_weight="10"
+            android:gravity="center|right"
+            android:textSize="20sp"
+            android:textColor="#ffffffff"
+            app:fontFamily="@font/cavolini"/>
+        <ImageView
+            android:src="@drawable/_correctAnswer"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="match_parent"
+            android:id="@+id/imageCorrectAnswer"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center|right" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:src="@drawable/m1a1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/imageQuestion"
+        android:scaleType="fitCenter"
+        android:layout_weight="40"
+        android:adjustViewBounds="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"  />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="You are not logged in Google Games"
+        android:id="@+id/textLogged"
+        android:textSize="15sp"
+        android:textColor="#ffffffff"
+        app:fontFamily="@font/cavolini"   />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight="8"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_marginLeft="35dp"
+            android:layout_height="match_parent"
+            android:id="@+id/linearHeart"
+            >
+            <ImageView
+                android:src="@drawable/_heart"
+                android:layout_width="0dp"
+                android:layout_weight="33"
+                android:layout_height="match_parent"
+                android:id="@+id/imageHeart1" />
+            <ImageView
+                android:src="@drawable/_heart"
+                android:layout_width="0dp"
+                android:layout_weight="33"
+                android:layout_height="match_parent"
+                android:id="@+id/imageHeart2" />
+            <ImageView
+                android:src="@drawable/_heart"
+                android:layout_width="0dp"
+                android:layout_weight="33"
+                android:layout_height="match_parent"
+                android:id="@+id/imageHeart3" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_marginRight="35dp"
+            android:layout_height="match_parent"
+/>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/linearButton"
+        android:layout_weight="45"
+        android:gravity="center">
+
+
+
+        <Button
+            android:text="Answer A"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/buttonAnswerA"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/_ShapeButton"
+            android:textSize="15sp"
+            android:layout_weight="10"
+            android:textColor="#ffffffff"
+            app:fontFamily="@font/cavolini"/>
+
+        <Button
+            android:text="Answer B"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/buttonAnswerB"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/_ShapeButton"
+            android:textSize="15sp"
+            android:layout_weight="10"
+            android:textColor="#ffffffff"
+            app:fontFamily="@font/cavolini"/>
+
+        <Button
+            android:text="Answer C"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/buttonAnswerC"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/_ShapeButton"
+            android:textSize="15sp"
+            android:layout_weight="10"
+            android:textColor="#ffffffff"
+            app:fontFamily="@font/cavolini"/>
+
+        <Button
+            android:text="Answer D"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/buttonAnswerD"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/_ShapeButton"
+            android:textSize="15sp"
+            android:layout_weight="10"
+            android:textColor="#ffffffff"
+            app:fontFamily="@font/cavolini"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
