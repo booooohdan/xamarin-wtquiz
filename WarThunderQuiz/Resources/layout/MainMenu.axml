@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="0dp"
-        android:layout_weight="8" >
+        android:layout_weight="7" >
         
         <LinearLayout
             android:orientation="horizontal"
@@ -32,13 +32,6 @@
                     android:layout_height="0dp"
                     android:layout_weight="70"
                     android:id="@+id/MMAvatar" />
-                <ImageView
-                    android:src="@drawable/_avatarFlagDefault"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="30"
-                    android:padding="1dp" 
-                   android:id="@+id/MMAvatarFlag" />
             </LinearLayout>
 
             <LinearLayout
@@ -57,32 +50,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/MMProfineName"
-                        android:gravity="left"
+                        android:gravity="left|center"
                         android:textColor="#ffffffff"
                         android:textSize="18sp"
                                         app:fontFamily="@font/cavolini"
                                             android:singleLine="true" />
-                    </LinearLayout>
-                   <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="50">
-                    <TextView
-                        android:text="10k"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="50"
-                        android:id="@+id/MMTotalPoint"
-                        android:textSize="18sp"
-                        android:textColor="#ffffffff"
-                        app:fontFamily="@font/cavolini"/>
-                                        <ImageView
-                        android:src="@drawable/_correctAnswer"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="50"
-                        android:adjustViewBounds="true"/>
                     </LinearLayout>
             </LinearLayout>
             </LinearLayout>
@@ -96,8 +68,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="33"
-            android:background="@drawable/_MMTopPanel"
-            android:layout_marginBottom="15dp">
+            android:background="@drawable/_MMTopPanel">
             <TextView
                 android:text="500"
                 android:layout_width="0dp"
@@ -109,7 +80,7 @@
                 android:textColor="#ffffffff"
                 app:fontFamily="@font/cavolini"/>
             <ImageView
-                android:src="@drawable/_hintpoints"
+                android:src="@drawable/_correctanswer"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50"
@@ -117,38 +88,7 @@
 
 
         </LinearLayout>
-                           <Space
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="33"
-            android:background="@drawable/_MMTopPanel"
-            android:layout_marginBottom="15dp">
-
-
-            <TextView
-                android:text="30"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="50"
-                android:id="@+id/MMEveryDayPoint"
-                android:gravity="center|right"
-                android:textSize="18sp"
-                android:textColor="#ffffffff" 
-                            app:fontFamily="@font/cavolini"/>
-            <ImageView
-                android:src="@drawable/_correctDailyAnswer"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="50"
-                android:adjustViewBounds="true"
-                android:padding="5dp" />
-
-        </LinearLayout>
+                     
         </LinearLayout>
 
 
@@ -157,23 +97,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="28"
-        android:padding="10dp" />
+        android:padding="18dp" />
 
 
-        <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="0dp"
-        android:layout_weight="6" >
-        <ImageButton
-            android:src="@drawable/_profile"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/MMProfileButton"
-            android:background="@drawable/_mmprofilebutton"
-            android:layout_weight="15"
-            android:scaleType="fitCenter"
-            android:padding="4dp" />
+        android:layout_weight="6">
 
         <Space
             android:layout_width="0dp"
@@ -189,7 +120,7 @@
             android:layout_weight="15"
             android:scaleType="fitCenter"
             android:padding="4dp" />
-        </LinearLayout>
+    </LinearLayout>
 
            <Space
         android:layout_width="match_parent"

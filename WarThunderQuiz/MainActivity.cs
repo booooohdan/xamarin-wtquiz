@@ -24,8 +24,8 @@ namespace WarThunderQuiz
     public class MainActivity : AppCompatActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
         Button _MMClassicModeButton, _MMHardcoreModeButton, _MMEveryDayModeButton;
-        ImageButton _MMSettingsButton, _MMPedestalButton, _MMCupButton, _MMProfileButton;
-        TextView _MMTotalPointsTextView, _MMHintPointsTextView, _MMEveryDayPointsTextView, _MMNicknameTextView;
+        ImageButton _MMSettingsButton, _MMPedestalButton, _MMCupButton;
+        TextView  _MMHintPointsTextView,  _MMNicknameTextView;
         Context context;
         GameHelper helper;
         int STotalPoints;
@@ -53,14 +53,11 @@ namespace WarThunderQuiz
             _MMClassicModeButton = FindViewById<Button>(Resource.Id.MMClassicModeButton);
             _MMHardcoreModeButton = FindViewById<Button>(Resource.Id.MMHardcoreModeButton);
             _MMEveryDayModeButton = FindViewById<Button>(Resource.Id.MMEveryDayModeButton);
-            _MMProfileButton = FindViewById<ImageButton>(Resource.Id.MMProfileButton);
             _MMSettingsButton = FindViewById<ImageButton>(Resource.Id.MMSettingsButton);
             _MMPedestalButton = FindViewById<ImageButton>(Resource.Id.MMPedestalButton);
             _MMCupButton = FindViewById<ImageButton>(Resource.Id.MMCupButton);
 
-            _MMTotalPointsTextView = FindViewById<TextView>(Resource.Id.MMTotalPoint);
             _MMHintPointsTextView = FindViewById<TextView>(Resource.Id.MMHintPoint);
-            _MMEveryDayPointsTextView = FindViewById<TextView>(Resource.Id.MMEveryDayPoint);
             _MMNicknameTextView = FindViewById<TextView>(Resource.Id.MMProfineName);
 
             #endregion
@@ -76,9 +73,7 @@ namespace WarThunderQuiz
 
             #region Запис в TextView з SharedPreference
             _MMNicknameTextView.SetText(NickName, TextView.BufferType.Normal);
-            _MMTotalPointsTextView.SetText(STotalPoints.ToString(), TextView.BufferType.Normal);
             _MMHintPointsTextView.SetText("0", TextView.BufferType.Normal);
-            _MMEveryDayPointsTextView.SetText("0", TextView.BufferType.Normal);
 
             #endregion
 
@@ -86,7 +81,6 @@ namespace WarThunderQuiz
             _MMClassicModeButton.Click += _MMClassicModeButton_Click;
             _MMHardcoreModeButton.Click += _MMHardcoreModeButton_Click;
             _MMEveryDayModeButton.Click += _MMEveryDayModeButton_Click;
-            _MMProfileButton.Click += _MMProfileButton_Click;
             _MMSettingsButton.Click += _MMSettingsButton_Click;
             _MMPedestalButton.Click += _MMPedestalButton_Click;
             _MMCupButton.Click += _MMCupButton_Click;
@@ -121,12 +115,6 @@ namespace WarThunderQuiz
             StartActivity(intent);
             Finish();
 
-        }
-
-        private void _MMProfileButton_Click(object sender, EventArgs e)
-    {
-            Intent intent = new Intent(this, typeof(Profile));
-            StartActivity(intent);
         }
 
     private void _MMSettingsButton_Click(object sender, EventArgs e)

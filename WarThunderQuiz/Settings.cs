@@ -26,12 +26,9 @@ namespace WarThunderQuiz
     {
         Context context;
         SignInButton signInButton;
-        Button signOutButton, _BackToMenuButtonNo, _BackToMenuButtonYes;
+        Button signOutButton, ButtonReddit, ButtonEmail;
+        RatingBar RatingBar;
         GameHelper helper;
-        LayoutInflater layoutInflater;
-        View mview;
-        Android.App.AlertDialog.Builder alertDialogBuilder;
-        Android.App.AlertDialog alertDialogAndroid;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -42,16 +39,49 @@ namespace WarThunderQuiz
             #region Прив'язкаView
             signInButton = FindViewById<SignInButton>(Resource.Id.signInButton);
             signOutButton = FindViewById<Button>(Resource.Id.signOutButton);
+            ButtonReddit = FindViewById<Button>(Resource.Id.buttonReddit);
+            ButtonEmail = FindViewById<Button>(Resource.Id.buttonEMail);
+            RatingBar = FindViewById<RatingBar>(Resource.Id.ratingBar);
+
 
             #endregion
 
             #region Оголошення подій
             signInButton.Click += SignInButton_Click;
             signOutButton.Click += SignOutButton_Click;
+            ButtonReddit.Click += ButtonReddit_Click;
+            ButtonEmail.Click += ButtonEmail_Click;
+            RatingBar.RatingBarChange += RatingBar_RatingBarChange;
 
             #endregion
 
             InitializeServices();
+        }
+
+        private void ButtonReddit_Click(object sender, EventArgs e)
+        {
+            var uri = Android.Net.Uri.Parse("https://www.reddit.com/r/wave_app/");
+            var intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
+        }
+
+        private void ButtonEmail_Click(object sender, EventArgs e)
+        {
+            var EditTo = "waveappfeedback@gmail.com";
+            var EditSubject = "WT Quiz Feedback";
+            var EditMessage = "";
+
+            Intent email = new Intent(Intent.ActionSend);
+            email.PutExtra(Intent.ExtraEmail, new string[] { EditTo.ToString() });
+            email.PutExtra(Intent.ExtraSubject, new string[] { EditSubject.ToString() });
+            email.PutExtra(Intent.ExtraText, new string[] { EditMessage.ToString() });
+            email.SetType("message/rfc822");
+            StartActivity(Intent.CreateChooser(email, "Choose your email client:"));
+        }
+
+        private void RatingBar_RatingBarChange(object sender, RatingBar.RatingBarChangeEventArgs e)
+        {
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://play.google.com/store/apps/details?id=com.wave.wtquiz")));
         }
 
         #region GoogleGames

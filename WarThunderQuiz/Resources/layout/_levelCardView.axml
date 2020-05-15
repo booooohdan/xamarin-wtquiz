@@ -69,7 +69,7 @@
                 android:id="@+id/containerOne"
                 android:gravity="center">
                 <ImageView
-                    android:src="@drawable/__atlanticMap"
+                    android:src="@drawable/_mapcoralsea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/mapImageView"
