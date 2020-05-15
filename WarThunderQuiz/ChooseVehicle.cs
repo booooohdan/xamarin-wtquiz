@@ -42,7 +42,16 @@ namespace WarThunderQuiz
             SetContentView(Resource.Layout.ChooseVehicleMenu);
             context = Application.Context;
 
-            levels = LevelCollection.GetLevels();
+            var indexOfGM = Intent.GetIntExtra("IndexOfGameMode", 1); //номер рівня
+
+            if (indexOfGM == 1)
+            {
+                levels = LevelCollection.GetLevels();
+            } else
+            if (indexOfGM == 2)
+            {
+                levels = LevelCollection.GetTrainingLevels();
+            }
 
             recyclerView = FindViewById<RecyclerView>(Resource.Id.LevelsRecyclerView);
             recyclerView.HasFixedSize = true;

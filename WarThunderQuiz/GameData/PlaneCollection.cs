@@ -830,6 +830,24 @@ namespace WarThunderQuiz.GameData
 
 
             vehicle = new Vehicle();
+            vehicle.Image = Resource.Drawable.mi28;
+            vehicle.Name = "Mi-28N";
+            vehicle.Nation = "USSR";
+            vehicle.Character = "Plane";
+            vehicle.PeriodOfTime = 3;
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle();
+            vehicle.Image = Resource.Drawable.ka50;
+            vehicle.Name = "Ka-50";
+            vehicle.Nation = "USSR";
+            vehicle.Character = "Plane";
+            vehicle.PeriodOfTime = 3;
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle();
             vehicle.Image = Resource.Drawable.mi24a;
             vehicle.Name = "Mi-24A";
             vehicle.Nation = "USSR";
@@ -1667,7 +1685,14 @@ namespace WarThunderQuiz.GameData
 
 
             /////////////////////////////////////////////ІТАЛІЯ//////////////////////////////////////////////
-
+            
+            vehicle = new Vehicle();
+            vehicle.Image = Resource.Drawable.a129;
+            vehicle.Name = "A-129";
+            vehicle.Nation = "Italy";
+            vehicle.Character = "Plane";
+            vehicle.PeriodOfTime = 3;
+            vehicles.Add(vehicle);
 
             vehicle = new Vehicle();
             vehicle.Image = Resource.Drawable.re_2000_ga;
@@ -1967,6 +1992,15 @@ namespace WarThunderQuiz.GameData
             vehicle = new Vehicle();
             vehicle.Image = Resource.Drawable.tiger_had_france;
             vehicle.Name = "EC-665 Tiger HAD";
+            vehicle.Nation = "France";
+            vehicle.PeriodOfTime = 3;
+            vehicle.Character = "Plane";
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle();
+            vehicle.Image = Resource.Drawable.Etendardivm;
+            vehicle.Name = "Etendard IVM";
             vehicle.Nation = "France";
             vehicle.PeriodOfTime = 3;
             vehicle.Character = "Plane";

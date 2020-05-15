@@ -41,7 +41,6 @@ namespace WarThunderQuiz
         #region Оголошення змінних реклами
         Context context;
         protected AdView mAdView;
-        public Button SRDoublePointsButton { get; set; } //rewardvideo
         public IRewardedVideoAd SRRewardedVideoAd { get; set; } //rewardvideo
         Button SRDoublePointsButtonClick;
         #endregion
@@ -109,16 +108,18 @@ namespace WarThunderQuiz
             SRDoublePointsButtonClick.Click += SRDoublePointsButton_Click;
             #endregion
 
-
+            SRDoublePointsButtonClick.SetText("Loading ...", TextView.BufferType.Normal);
 
             InitializeServices();
-            if (SRLevelNumber == 100)
+            if (SRLevelNumber == 100 | SRLevelNumber==101 | SRLevelNumber == 102 | SRLevelNumber == 103 | 
+                SRLevelNumber == 104 | SRLevelNumber == 105 | SRLevelNumber == 106 | SRLevelNumber == 107 | 
+                SRLevelNumber == 108 | SRLevelNumber == 109 | SRLevelNumber == 110 | SRLevelNumber == 111
+                | SRLevelNumber == 112 | SRLevelNumber == 113)
             {
                 _SRNextLevelButton.Visibility = Android.Views.ViewStates.Gone;
             }
-    //        SRDoublePointsButtonClick.Enabled = false;
-            SRDoublePointsButtonClick.SetText("Loading ...", TextView.BufferType.Normal);
-            }
+
+        }
 
         private void SetLabelDependingPoints()
         {
@@ -232,15 +233,15 @@ namespace WarThunderQuiz
         #region Відео нагорода, реалізація
         public void LoadRewardedVideoAd()
         {
-            SRRewardedVideoAd.LoadAd("ca-app-pub-8211072909515345/5206827518",
-             new AdRequest.Builder().Build());
-            //SRRewardedVideoAd.LoadAd("ca-app-pub-3940256099942544/5224354917",
-            //new AdRequest.Builder().AddTestDevice("D0BE22F1A4BE27C7470F95A699568FE2").Build());
+            //SRRewardedVideoAd.LoadAd("ca-app-pub-8211072909515345/5206827518",
+            // new AdRequest.Builder().Build());
+            SRRewardedVideoAd.LoadAd("ca-app-pub-3940256099942544/5224354917",
+            new AdRequest.Builder().AddTestDevice("D0BE22F1A4BE27C7470F95A699568FE2").Build());
         }
 
         public void OnRewarded(IRewardItem reward)
         {
-            Toast.MakeText(this, string.Format("OnRewarded ! currency: {0} amount: {1}", reward.GetType(), reward.Amount), ToastLength.Short).Show();
+            //Toast.MakeText(this, string.Format("OnRewarded ! currency: {0} amount: {1}", reward.GetType(), reward.Amount), ToastLength.Short).Show();
             points = points * 2;
 
             ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(context);
@@ -265,6 +266,7 @@ namespace WarThunderQuiz
         public void OnRewardedVideoAdClosed()
         {
             //  Toast.MakeText(this, "OnRewardedVideoAdClosed", ToastLength.Short).Show();
+            LoadRewardedVideoAd();
         }
 
         public void OnRewardedVideoAdFailedToLoad(int errorCode)
@@ -274,7 +276,7 @@ namespace WarThunderQuiz
 
         public void OnRewardedVideoAdLoaded()
         {
-            Log.Info("VideoAD: ", "DONEEE");
+            Log.Info("VideoAD: ", "WOOOOOOOOOOOOOOOHOOOOOOOOOOOOOOOOOOOOOOOOOO");
             SRDoublePointsButtonClick.Enabled = true;
             SRDoublePointsButtonClick.SetText("Double points", TextView.BufferType.Normal);
 
@@ -292,7 +294,7 @@ namespace WarThunderQuiz
 
         public void OnRewardedVideoCompleted()
         {
-            //   Toast.MakeText(this, "OnRewardedVideoCompleted", ToastLength.Short).Show();
+               Toast.MakeText(this, "OnRewardedVideoCompleted", ToastLength.Short).Show();
         }
 
         public void ShowRewardedVideo()
@@ -352,7 +354,7 @@ namespace WarThunderQuiz
             if (helper != null && !helper.SignedOut)
             {
                 var code = "CgkI-cHtgZAREAIQCg";
-                var value = points;
+                var value = points*10;
                 helper.SubmitScore(code, value);
             }
         }

@@ -97,8 +97,11 @@ namespace WarThunderQuiz
 
         private void _MMClassicModeButton_Click(object sender, EventArgs e)
     {
-        StartActivity(typeof(ChooseVehicle));
-    }
+            Intent intent = new Intent(this, typeof(ChooseVehicle));
+            intent.PutExtra("IndexOfGameMode", 1);
+            StartActivity(intent);
+            Finish();
+        }
 
     private void _MMHardcoreModeButton_Click(object sender, EventArgs e)
     {
@@ -113,12 +116,14 @@ namespace WarThunderQuiz
 
     private void _MMEveryDayModeButton_Click(object sender, EventArgs e)
     {
-            Intent intent = new Intent(this, typeof(Profile));
+            Intent intent = new Intent(this, typeof(ChooseVehicle));
+            intent.PutExtra("IndexOfGameMode", 2);
             StartActivity(intent);
+            Finish();
 
         }
 
-    private void _MMProfileButton_Click(object sender, EventArgs e)
+        private void _MMProfileButton_Click(object sender, EventArgs e)
     {
             Intent intent = new Intent(this, typeof(Profile));
             StartActivity(intent);

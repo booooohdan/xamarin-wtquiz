@@ -246,7 +246,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 8:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -257,7 +258,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 9:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -268,7 +270,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 10:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -279,7 +282,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 11:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -290,7 +294,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 12:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -301,7 +306,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 13:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -312,7 +318,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 14:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -323,7 +330,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 15:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -334,7 +342,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 16:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -345,7 +354,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 17:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -356,7 +366,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 18:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -367,7 +378,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 19:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -378,7 +390,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 20:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -389,7 +402,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 21:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -400,7 +414,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 22:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -411,7 +426,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 23:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -422,7 +438,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 24:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -433,7 +450,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 25:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -444,7 +462,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 26:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -455,7 +474,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 27:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -466,7 +486,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 28:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -477,7 +498,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 29:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -488,7 +510,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 30:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -499,7 +522,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 31:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible; 
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -510,7 +534,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 32:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -522,7 +547,8 @@ namespace WarThunderQuiz
 
 
                 case 33:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -533,7 +559,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 34:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -544,7 +571,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 35:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndShips();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -555,7 +583,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 36:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 1;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -566,7 +595,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 37:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 1;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -577,7 +607,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 38:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 1;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -588,7 +619,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 39:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 1;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -599,7 +631,8 @@ namespace WarThunderQuiz
                     break;
 
                 case 40:
-                    _linearHeart.Visibility = ViewStates.Invisible;
+                    lifeCount = 1;
+                    _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
 
                     if (correctAnswer >= ChoosedTotalScore - 1)
@@ -621,6 +654,164 @@ namespace WarThunderQuiz
                     planes.AddRange(tanks);
                     planes.AddRange(ships);
                     vehicles = planes;
+                    break;
+
+                case 101:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked102", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel101", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 102:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked103", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel102", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 103:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked104", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel103", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 104:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked105", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel104", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 105:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked106", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel105", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 106:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked107", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel106", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 107:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked108", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel107", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+
+                case 108:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked109", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel108", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 109:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked110", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel109", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 110:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndShips();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked111", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel110", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+
+                case 111:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked112", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel111", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 112:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked113", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel112", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 113:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked114", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel113", correctAnswer); }
+                    editor.Apply();
                     break;
 
             }
@@ -686,7 +877,7 @@ namespace WarThunderQuiz
 
         public void OnRewardedVideoAdLoaded()
         {
-            Log.Info("VideoAD: ", "DONEEE");
+            Log.Info("VideoAD: ", "DONE----------------EE");
             //Toast.MakeText(this, "OnRewardedVideoAdLoaded", ToastLength.Short).Show();
         }
 
@@ -1473,6 +1664,110 @@ namespace WarThunderQuiz
 
 
                 case 100:
+                    break;
+
+
+                case 101:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane"&& s.Nation == "USA" ||
+                                               s.Character == "Tank" && s.Nation == "USA"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 102:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane" && s.Nation == "Germany" ||
+                                               s.Character == "Tank" && s.Nation == "Germany"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 103:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane" && s.Nation == "USSR" ||
+                                               s.Character == "Tank" && s.Nation == "USSR"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 104:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane" && s.Nation == "GB" ||
+                                               s.Character == "Tank" && s.Nation == "GB"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 105:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane" && s.Nation == "Japan" ||
+                                               s.Character == "Tank" && s.Nation == "Japan"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 106:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane" && s.Nation == "Italy" ||
+                                               s.Character == "Tank" && s.Nation == "Italy"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 107:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane" && s.Nation == "France" ||
+                                               s.Character == "Tank" && s.Nation == "France"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 108:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 109:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Tank"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 110:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Ship"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+
+                case 111:
+                    linqCharacter = from s in vehicles
+                                    where s.PeriodOfTime == 1
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+
+
+                case 112:
+                    linqCharacter = from s in vehicles
+                                    where s.PeriodOfTime == 2
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+
+
+                case 113:
+                    linqCharacter = from s in vehicles
+                                    where s.PeriodOfTime == 3
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
                     break;
             }
 
