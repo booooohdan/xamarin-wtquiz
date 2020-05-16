@@ -1,11 +1,8 @@
 ﻿using System.Collections.Generic;
-
 using Android.App;
-using Android.Content;
 
 namespace WarThunderQuiz.GameData
 {
-
     class TankCollection
     {
         public static List<Vehicle> GetTanks()
@@ -13,9 +10,8 @@ namespace WarThunderQuiz.GameData
             var context = Application.Context;
             var vehicles = new List<Vehicle>();
             Vehicle vehicle;
-            vehicles.Clear();
 
-            ///////////////////////////////////////////   США   ///////////////////////////////////////////
+            ///////////////////////////////////////////   USA   ///////////////////////////////////////////
 
             vehicle = new Vehicle
             {
@@ -427,7 +423,7 @@ namespace WarThunderQuiz.GameData
             };
             vehicles.Add(vehicle);
 
-            ///////////////////////////////////////////   НІМЕЧЧИНА   ///////////////////////////////////////////
+            ///////////////////////////////////////////   GERMANY   ///////////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -1011,7 +1007,7 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
-            ///////////////////////////////////////////   СРСР   ///////////////////////////////////////////
+            ///////////////////////////////////////////   USSR   ///////////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -1641,7 +1637,7 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
-            //////////////////////////////////////ВЕЛИКОБРИТАНІЯ///////////////////////////////////////
+            //////////////////////////////////////GREAT BRITAIN///////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -2007,7 +2003,7 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
-            /////////////////////////////////////ЯПОНІЯ//////////////////////////////////////
+            /////////////////////////////////////JAPAN//////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -2274,7 +2270,7 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
-            ///////////////////////////////////////ІТАЛІЯ///////////////////////////////////////
+            ///////////////////////////////////////ITALY///////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -2770,6 +2766,245 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_strv_m31,
+                Name = "Strv m/31",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 1
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_ikv_72,
+                Name = "Ikv 72",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 1
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_strv_m41_s2,
+                Name = "Strv m/41 S-II",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 1
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_lago_1,
+                Name = "Lago I",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 1
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_tgdgb_m40_lv,
+                Name = "Lvtdgb m/40",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 2
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_pvlvv_fm42,
+                Name = "Pvlvv fm/42",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 2
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_stormpjas_fm43_44,
+                Name = "Fm/43-44",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 2
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_sav_m43_1944,
+                Name = "Sav m/43 (1944)",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 2
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_sav_fm48,
+                Name = "SAV 20.12.48",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 2
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_strv_m42_delat_torn,
+                Name = "Delat Torn",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 2
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_strv_74,
+                Name = "Strv 74",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 2
+            };
+            vehicles.Add(vehicle);
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_l_62_anti_ii,
+                Name = "L-62 ANTI II",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_ikv_103,
+                Name = "Ikv 103",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_ikv_91,
+                Name = "Ikv 91",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_landsverk_ush_405,
+                Name = "U-SH 405",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_veak_40,
+                Name = "VEAK 40",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_udes_33,
+                Name = "UDES 33",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_strf_90c,
+                Name = "Strf 90C",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_strv_103c,
+                Name = "Strv 103С",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_lvrbv_701,
+                Name = "Lvrbv 701",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_lvkv_90c,
+                Name = "Lvkv 90C",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.sw_cv_90120,
+                Name = "CV 90120",
+                Nation = "Sweden",
+                Character = "Tank",
+                PeriodOfTime = 3
+            };
+            vehicles.Add(vehicle);
 
 
             return vehicles;

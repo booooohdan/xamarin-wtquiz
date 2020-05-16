@@ -1,19 +1,8 @@
 ﻿using System.Collections.Generic;
-
 using Android.App;
-using Android.Content;
 
 namespace WarThunderQuiz.GameData
 {
-    public class Vehicle
-    {
-        public int Image { get; set; }
-        public string Name { get; set; }
-        public string Nation { get; set; }
-        public string Character { get; set; }
-        public int PeriodOfTime { get; set; }
-    }
-
     class PlaneCollection
     {
         public static List<Vehicle> GetPlanes()
@@ -22,7 +11,7 @@ namespace WarThunderQuiz.GameData
             var vehicles = new List<Vehicle>();
             Vehicle vehicle;
 
-            ///////////////////////////////////////////   США   ///////////////////////////////////////////
+            ///////////////////////////////////////////   USA   ///////////////////////////////////////////
             vehicle = new Vehicle
             {
                 Image = Resource.Drawable.p_61,
@@ -509,7 +498,7 @@ namespace WarThunderQuiz.GameData
             };
             vehicles.Add(vehicle);
 
-            ///////////////////////////////////////////   НІМЕЧЧИНА   ///////////////////////////////////////////
+            ///////////////////////////////////////////   GERMANY   ///////////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -996,7 +985,7 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
-            ///////////////////////////////////////////   СРСР   ///////////////////////////////////////////
+            ///////////////////////////////////////////   USSR   ///////////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -1396,7 +1385,7 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
-            //////////////////////////////////////////ВЕЛИКОБРИТАНІЯ///////////////////////////////////////
+            //////////////////////////////////////////GREAT BRITAIN///////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -1758,7 +1747,7 @@ namespace WarThunderQuiz.GameData
             };
             vehicles.Add(vehicle);
 
-            ///////////////////////////////////ЯПОНІЯ/////////////////////////////////////
+            ///////////////////////////////////JAPAN/////////////////////////////////////
 
             vehicle = new Vehicle
             {
@@ -2044,7 +2033,7 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
-            /////////////////////////////////////////////ІТАЛІЯ//////////////////////////////////////////////
+            /////////////////////////////////////////////ITALY//////////////////////////////////////////////
 
             vehicle = new Vehicle
             {
@@ -2235,7 +2224,7 @@ namespace WarThunderQuiz.GameData
             vehicles.Add(vehicle);
 
 
-            ///////////////////////////////////////////ФРАНЦІЯ///////////////////////////////////////////////////
+            ///////////////////////////////////////////FRANCE///////////////////////////////////////////////////
 
 
             vehicle = new Vehicle
@@ -2439,6 +2428,160 @@ namespace WarThunderQuiz.GameData
                 Character = "Plane"
             };
             vehicles.Add(vehicle);
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.fiat_cr42_j11,
+                Name = "J11",
+                Nation = "Sweden",
+                PeriodOfTime = 1,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.saab_b3c,
+                Name = "B3C",
+                Nation = "Sweden",
+                PeriodOfTime = 1,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.re_2000_j20,
+                Name = "J20",
+                Nation = "Sweden",
+                PeriodOfTime = 2,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.ffvs_j22_b,
+                Name = "J22-B",
+                Nation = "Sweden",
+                PeriodOfTime = 2,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.p51d20naj26,
+                Name = "J26",
+                Nation = "Sweden",
+                PeriodOfTime = 2,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.saab_b17a,
+                Name = "B17A",
+                Nation = "Sweden",
+                PeriodOfTime = 2,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.saab_t18b_1,
+                Name = "T18B-1",
+                Nation = "Sweden",
+                PeriodOfTime = 2,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.morko_morane,
+                Name = "Mörkö-Morane",
+                Nation = "Sweden",
+                PeriodOfTime = 2,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.pyorremyrsky,
+                Name = "Pyorremyrsky",
+                Nation = "Sweden",
+                PeriodOfTime = 2,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.saab_j21ra,
+                Name = "J21RA",
+                Nation = "Sweden",
+                PeriodOfTime = 3,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.vampire_fb5_j28b,
+                Name = "J28B",
+                Nation = "Sweden",
+                PeriodOfTime = 3,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.saab_j29b,
+                Name = "J/A29B",
+                Nation = "Sweden",
+                PeriodOfTime = 3,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.saab_j32b,
+                Name = "J32B Lansen",
+                Nation = "Sweden",
+                PeriodOfTime = 3,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
+
+            vehicle = new Vehicle
+            {
+                Image = Resource.Drawable.saab_j35d,
+                Name = "J35D Draken",
+                Nation = "Sweden",
+                PeriodOfTime = 3,
+                Character = "Plane"
+            };
+            vehicles.Add(vehicle);
+
 
             return vehicles;
         }

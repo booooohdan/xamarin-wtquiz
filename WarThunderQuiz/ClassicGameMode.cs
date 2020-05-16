@@ -656,11 +656,11 @@ namespace WarThunderQuiz
                     vehicles = planes;
                     break;
 
+
                 case 101:
                     lifeCount = 3;
                     _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
-
                     if (correctAnswer >= ChoosedTotalScore - 1)
                     { editor.PutBoolean("LevelUnlocked102", true); }
                     if (correctAnswer > ChoosedLevelScoreEarned)
@@ -672,7 +672,6 @@ namespace WarThunderQuiz
                     lifeCount = 3;
                     _linearHeart.Visibility = ViewStates.Visible;
                     LoadListPlanesAndTanks();
-
                     if (correctAnswer >= ChoosedTotalScore - 1)
                     { editor.PutBoolean("LevelUnlocked103", true); }
                     if (correctAnswer > ChoosedLevelScoreEarned)
@@ -683,8 +682,7 @@ namespace WarThunderQuiz
                 case 103:
                     lifeCount = 3;
                     _linearHeart.Visibility = ViewStates.Visible;
-                    LoadListPlanesAndTanks();
-
+                    LoadListPlanesAndShips();
                     if (correctAnswer >= ChoosedTotalScore - 1)
                     { editor.PutBoolean("LevelUnlocked104", true); }
                     if (correctAnswer > ChoosedLevelScoreEarned)
@@ -740,7 +738,6 @@ namespace WarThunderQuiz
                     editor.Apply();
                     break;
 
-
                 case 108:
                     lifeCount = 3;
                     _linearHeart.Visibility = ViewStates.Visible;
@@ -768,15 +765,14 @@ namespace WarThunderQuiz
                 case 110:
                     lifeCount = 3;
                     _linearHeart.Visibility = ViewStates.Visible;
-                    LoadListPlanesAndShips();
-
+                    LoadListPlanesAndTanks();
+                     
                     if (correctAnswer >= ChoosedTotalScore - 1)
                     { editor.PutBoolean("LevelUnlocked111", true); }
                     if (correctAnswer > ChoosedLevelScoreEarned)
                     { editor.PutInt("SScoreLevel110", correctAnswer); }
                     editor.Apply();
                     break;
-
 
                 case 111:
                     lifeCount = 3;
@@ -789,6 +785,7 @@ namespace WarThunderQuiz
                     { editor.PutInt("SScoreLevel111", correctAnswer); }
                     editor.Apply();
                     break;
+
 
                 case 112:
                     lifeCount = 3;
@@ -811,6 +808,18 @@ namespace WarThunderQuiz
                     { editor.PutBoolean("LevelUnlocked114", true); }
                     if (correctAnswer > ChoosedLevelScoreEarned)
                     { editor.PutInt("SScoreLevel113", correctAnswer); }
+                    editor.Apply();
+                    break;
+
+                case 114:
+                    lifeCount = 3;
+                    _linearHeart.Visibility = ViewStates.Visible;
+                    LoadListPlanesAndTanks();
+
+                    if (correctAnswer >= ChoosedTotalScore - 1)
+                    { editor.PutBoolean("LevelUnlocked115", true); }
+                    if (correctAnswer > ChoosedLevelScoreEarned)
+                    { editor.PutInt("SScoreLevel114", correctAnswer); }
                     editor.Apply();
                     break;
 
@@ -1666,8 +1675,28 @@ namespace WarThunderQuiz
                 case 100:
                     break;
 
-
                 case 101:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 102:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Tank"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 103:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Ship"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+                case 104:
                     linqCharacter = from s in vehicles
                                     where s.Character == "Plane"&& s.Nation == "USA" ||
                                                s.Character == "Tank" && s.Nation == "USA"
@@ -1675,7 +1704,7 @@ namespace WarThunderQuiz
                     vehicles = linqCharacter.ToList();
                     break;
 
-                case 102:
+                case 105:
                     linqCharacter = from s in vehicles
                                     where s.Character == "Plane" && s.Nation == "Germany" ||
                                                s.Character == "Tank" && s.Nation == "Germany"
@@ -1683,7 +1712,7 @@ namespace WarThunderQuiz
                     vehicles = linqCharacter.ToList();
                     break;
 
-                case 103:
+                case 106:
                     linqCharacter = from s in vehicles
                                     where s.Character == "Plane" && s.Nation == "USSR" ||
                                                s.Character == "Tank" && s.Nation == "USSR"
@@ -1691,7 +1720,7 @@ namespace WarThunderQuiz
                     vehicles = linqCharacter.ToList();
                     break;
 
-                case 104:
+                case 107:
                     linqCharacter = from s in vehicles
                                     where s.Character == "Plane" && s.Nation == "GB" ||
                                                s.Character == "Tank" && s.Nation == "GB"
@@ -1699,7 +1728,7 @@ namespace WarThunderQuiz
                     vehicles = linqCharacter.ToList();
                     break;
 
-                case 105:
+                case 108:
                     linqCharacter = from s in vehicles
                                     where s.Character == "Plane" && s.Nation == "Japan" ||
                                                s.Character == "Tank" && s.Nation == "Japan"
@@ -1707,7 +1736,7 @@ namespace WarThunderQuiz
                     vehicles = linqCharacter.ToList();
                     break;
 
-                case 106:
+                case 109:
                     linqCharacter = from s in vehicles
                                     where s.Character == "Plane" && s.Nation == "Italy" ||
                                                s.Character == "Tank" && s.Nation == "Italy"
@@ -1715,7 +1744,7 @@ namespace WarThunderQuiz
                     vehicles = linqCharacter.ToList();
                     break;
 
-                case 107:
+                case 110:
                     linqCharacter = from s in vehicles
                                     where s.Character == "Plane" && s.Nation == "France" ||
                                                s.Character == "Tank" && s.Nation == "France"
@@ -1723,29 +1752,16 @@ namespace WarThunderQuiz
                     vehicles = linqCharacter.ToList();
                     break;
 
-                case 108:
-                    linqCharacter = from s in vehicles
-                                    where s.Character == "Plane"
-                                    select s; //лінкю запит
-                    vehicles = linqCharacter.ToList();
-                    break;
-
-                case 109:
-                    linqCharacter = from s in vehicles
-                                    where s.Character == "Tank"
-                                    select s; //лінкю запит
-                    vehicles = linqCharacter.ToList();
-                    break;
-
-                case 110:
-                    linqCharacter = from s in vehicles
-                                    where s.Character == "Ship"
-                                    select s; //лінкю запит
-                    vehicles = linqCharacter.ToList();
-                    break;
-
-
                 case 111:
+                    linqCharacter = from s in vehicles
+                                    where s.Character == "Plane" && s.Nation == "Sweden" ||
+                                               s.Character == "Tank" && s.Nation == "Sweden"
+                                    select s; //лінкю запит
+                    vehicles = linqCharacter.ToList();
+                    break;
+
+
+                case 112:
                     linqCharacter = from s in vehicles
                                     where s.PeriodOfTime == 1
                                     select s; //лінкю запит
@@ -1754,7 +1770,7 @@ namespace WarThunderQuiz
 
 
 
-                case 112:
+                case 113:
                     linqCharacter = from s in vehicles
                                     where s.PeriodOfTime == 2
                                     select s; //лінкю запит
@@ -1763,7 +1779,7 @@ namespace WarThunderQuiz
 
 
 
-                case 113:
+                case 114:
                     linqCharacter = from s in vehicles
                                     where s.PeriodOfTime == 3
                                     select s; //лінкю запит

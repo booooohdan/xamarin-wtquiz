@@ -1,41 +1,18 @@
 ﻿using System.Collections.Generic;
-
 using Android.App;
 using Android.Content;
 using Android.Preferences;
 
 namespace WarThunderQuiz.GameData
 {
-    class Level
-    {
-        public int Number { get; set; }
-
-        public string LevelName { get; set; }
-        public int LevelScoreEarned { get; set; }
-        public int LevelTotalScore { get; set; }
-        public bool LevelUnlocked { get; set; }
-
-        public int Map { get; set; }
-        public int LeftFlag1 { get; set; }
-        public int LeftFlag2 { get; set; }
-        public int LeftFlag3 { get; set; }
-        public int RightFlag1 { get; set; }
-        public int RightFlag2 { get; set; }
-        public int RightFlag3 { get; set; }
-        public int VehicleType1 { get; set; }
-        public int VehicleType2 { get; set; }
-    }
-
     class LevelCollection
     {
-
         public static List<Level> GetLevels()
         {
             var context = Application.Context;
             var levels = new List<Level>();
             Level level;
 
-            ///////////////////////////////////////////   Перша світова війна   ///////////////////////////////////////////
             var prefs = PreferenceManager.GetDefaultSharedPreferences(context);
             var editor = prefs.Edit();
 
@@ -592,7 +569,6 @@ namespace WarThunderQuiz.GameData
             levels.Add(level);
 
 
-
             level = new Level
             {
                 Number = 29,
@@ -835,8 +811,6 @@ namespace WarThunderQuiz.GameData
             return levels;
         }
 
-
-
         public static List<Level> GetTrainingLevels()
         {
             Context context = Application.Context;
@@ -851,150 +825,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 101,
-                LevelName = "Only USA",
+                LevelName = "Only Aviation",
                 LevelScoreEarned = prefs.GetInt("SScoreLevel101", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = true,
-                Map = Resource.Drawable._mapAmericanDesert,
-                LeftFlag1 = Resource.Drawable._flagUSA,
-                LeftFlag2 = Resource.Drawable._flagEmpty,
-                LeftFlag3 = Resource.Drawable._flagEmpty,
-                RightFlag1 = Resource.Drawable._flagUSA,
-                RightFlag2 = Resource.Drawable._flagEmpty,
-                RightFlag3 = Resource.Drawable._flagEmpty,
-                VehicleType1 = Resource.Drawable._plane,
-                VehicleType2 = Resource.Drawable._tank
-            };
-            levels.Add(level);
-
-
-            level = new Level
-            {
-                Number = 102,
-                LevelName = "Only Germany",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel102", 0),
-                LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked102", false),
-                Map = Resource.Drawable._mapBerlin,
-                LeftFlag1 = Resource.Drawable._flagGermany,
-                LeftFlag2 = Resource.Drawable._flagEmpty,
-                LeftFlag3 = Resource.Drawable._flagEmpty,
-                RightFlag1 = Resource.Drawable._flagGermany,
-                RightFlag2 = Resource.Drawable._flagEmpty,
-                RightFlag3 = Resource.Drawable._flagEmpty,
-                VehicleType1 = Resource.Drawable._plane,
-                VehicleType2 = Resource.Drawable._tank
-            };
-            levels.Add(level);
-
-
-            level = new Level
-            {
-                Number = 103,
-                LevelName = "Only USSR",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel103", 0),
-                LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked103", false),
-                Map = Resource.Drawable._mapKursk,
-                LeftFlag1 = Resource.Drawable._flagUSSR,
-                LeftFlag2 = Resource.Drawable._flagEmpty,
-                LeftFlag3 = Resource.Drawable._flagEmpty,
-                RightFlag1 = Resource.Drawable._flagUSSR,
-                RightFlag2 = Resource.Drawable._flagEmpty,
-                RightFlag3 = Resource.Drawable._flagEmpty,
-                VehicleType1 = Resource.Drawable._plane,
-                VehicleType2 = Resource.Drawable._tank
-            };
-            levels.Add(level);
-
-
-            level = new Level
-            {
-                Number = 104,
-                LevelName = "Only UK",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel104", 0),
-                LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked104", false),
-                Map = Resource.Drawable._mapBritain,
-                LeftFlag1 = Resource.Drawable._flagBritain,
-                LeftFlag2 = Resource.Drawable._flagEmpty,
-                LeftFlag3 = Resource.Drawable._flagEmpty,
-                RightFlag1 = Resource.Drawable._flagBritain,
-                RightFlag2 = Resource.Drawable._flagEmpty,
-                RightFlag3 = Resource.Drawable._flagEmpty,
-                VehicleType1 = Resource.Drawable._plane,
-                VehicleType2 = Resource.Drawable._tank
-            };
-            levels.Add(level);
-
-
-            level = new Level
-            {
-                Number = 105,
-                LevelName = "Only Japan",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel105", 0),
-                LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked105", false),
-                Map = Resource.Drawable._mapJapan,
-                LeftFlag1 = Resource.Drawable._flagJapan,
-                LeftFlag2 = Resource.Drawable._flagEmpty,
-                LeftFlag3 = Resource.Drawable._flagEmpty,
-                RightFlag1 = Resource.Drawable._flagJapan,
-                RightFlag2 = Resource.Drawable._flagEmpty,
-                RightFlag3 = Resource.Drawable._flagEmpty,
-                VehicleType1 = Resource.Drawable._plane,
-                VehicleType2 = Resource.Drawable._tank
-            };
-            levels.Add(level);
-
-
-            level = new Level
-            {
-                Number = 106,
-                LevelName = "Only Italy",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel106", 0),
-                LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked106", false),
-                Map = Resource.Drawable._mapItalia,
-                LeftFlag1 = Resource.Drawable._flagItaly,
-                LeftFlag2 = Resource.Drawable._flagEmpty,
-                LeftFlag3 = Resource.Drawable._flagEmpty,
-                RightFlag1 = Resource.Drawable._flagItaly,
-                RightFlag2 = Resource.Drawable._flagEmpty,
-                RightFlag3 = Resource.Drawable._flagEmpty,
-                VehicleType1 = Resource.Drawable._plane,
-                VehicleType2 = Resource.Drawable._tank
-            };
-            levels.Add(level);
-
-
-            level = new Level
-            {
-                Number = 107,
-                LevelName = "Only France",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel107", 0),
-                LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked107", false),
-                Map = Resource.Drawable._mapMajinotLine,
-                LeftFlag1 = Resource.Drawable._flagFrance,
-                LeftFlag2 = Resource.Drawable._flagEmpty,
-                LeftFlag3 = Resource.Drawable._flagEmpty,
-                RightFlag1 = Resource.Drawable._flagFrance,
-                RightFlag2 = Resource.Drawable._flagEmpty,
-                RightFlag3 = Resource.Drawable._flagEmpty,
-                VehicleType1 = Resource.Drawable._plane,
-                VehicleType2 = Resource.Drawable._tank
-            };
-            levels.Add(level);
-
-
-            level = new Level
-            {
-                Number = 108,
-                LevelName = "Only Aviation",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel108", 0),
-                LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked108", false),
                 Map = Resource.Drawable._mapLadoga,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagGermany,
@@ -1010,11 +844,11 @@ namespace WarThunderQuiz.GameData
 
             level = new Level
             {
-                Number = 109,
+                Number = 102,
                 LevelName = "Only Ground Forces",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel109", 0),
+                LevelScoreEarned = prefs.GetInt("SScoreLevel102", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked109", false),
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked102", false),
                 Map = Resource.Drawable._mapAshRiver,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagGermany,
@@ -1030,11 +864,11 @@ namespace WarThunderQuiz.GameData
 
             level = new Level
             {
-                Number = 110,
+                Number = 103,
                 LevelName = "Only Naval Forces",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel110", 0),
+                LevelScoreEarned = prefs.GetInt("SScoreLevel103", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked110", false),
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked103", false),
                 Map = Resource.Drawable._mapCoralSea,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagGermany,
@@ -1050,11 +884,171 @@ namespace WarThunderQuiz.GameData
 
             level = new Level
             {
+                Number = 104,
+                LevelName = "Only USA",
+                LevelScoreEarned = prefs.GetInt("SScoreLevel104", 0),
+                LevelTotalScore = 20,
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked104", false),
+                Map = Resource.Drawable._mapAmericanDesert,
+                LeftFlag1 = Resource.Drawable._flagUSA,
+                LeftFlag2 = Resource.Drawable._flagEmpty,
+                LeftFlag3 = Resource.Drawable._flagEmpty,
+                RightFlag1 = Resource.Drawable._flagUSA,
+                RightFlag2 = Resource.Drawable._flagEmpty,
+                RightFlag3 = Resource.Drawable._flagEmpty,
+                VehicleType1 = Resource.Drawable._plane,
+                VehicleType2 = Resource.Drawable._tank
+            };
+            levels.Add(level);
+
+
+            level = new Level
+            {
+                Number = 105,
+                LevelName = "Only Germany",
+                LevelScoreEarned = prefs.GetInt("SScoreLevel105", 0),
+                LevelTotalScore = 20,
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked105", false),
+                Map = Resource.Drawable._mapBerlin,
+                LeftFlag1 = Resource.Drawable._flagGermany,
+                LeftFlag2 = Resource.Drawable._flagEmpty,
+                LeftFlag3 = Resource.Drawable._flagEmpty,
+                RightFlag1 = Resource.Drawable._flagGermany,
+                RightFlag2 = Resource.Drawable._flagEmpty,
+                RightFlag3 = Resource.Drawable._flagEmpty,
+                VehicleType1 = Resource.Drawable._plane,
+                VehicleType2 = Resource.Drawable._tank
+            };
+            levels.Add(level);
+
+
+            level = new Level
+            {
+                Number = 106,
+                LevelName = "Only USSR",
+                LevelScoreEarned = prefs.GetInt("SScoreLevel106", 0),
+                LevelTotalScore = 20,
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked106", false),
+                Map = Resource.Drawable._mapKursk,
+                LeftFlag1 = Resource.Drawable._flagUSSR,
+                LeftFlag2 = Resource.Drawable._flagEmpty,
+                LeftFlag3 = Resource.Drawable._flagEmpty,
+                RightFlag1 = Resource.Drawable._flagUSSR,
+                RightFlag2 = Resource.Drawable._flagEmpty,
+                RightFlag3 = Resource.Drawable._flagEmpty,
+                VehicleType1 = Resource.Drawable._plane,
+                VehicleType2 = Resource.Drawable._tank
+            };
+            levels.Add(level);
+
+
+            level = new Level
+            {
+                Number = 107,
+                LevelName = "Only UK",
+                LevelScoreEarned = prefs.GetInt("SScoreLevel107", 0),
+                LevelTotalScore = 20,
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked107", false),
+                Map = Resource.Drawable._mapBritain,
+                LeftFlag1 = Resource.Drawable._flagBritain,
+                LeftFlag2 = Resource.Drawable._flagEmpty,
+                LeftFlag3 = Resource.Drawable._flagEmpty,
+                RightFlag1 = Resource.Drawable._flagBritain,
+                RightFlag2 = Resource.Drawable._flagEmpty,
+                RightFlag3 = Resource.Drawable._flagEmpty,
+                VehicleType1 = Resource.Drawable._plane,
+                VehicleType2 = Resource.Drawable._tank
+            };
+            levels.Add(level);
+
+
+            level = new Level
+            {
+                Number = 108,
+                LevelName = "Only Japan",
+                LevelScoreEarned = prefs.GetInt("SScoreLevel108", 0),
+                LevelTotalScore = 20,
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked108", false),
+                Map = Resource.Drawable._mapJapan,
+                LeftFlag1 = Resource.Drawable._flagJapan,
+                LeftFlag2 = Resource.Drawable._flagEmpty,
+                LeftFlag3 = Resource.Drawable._flagEmpty,
+                RightFlag1 = Resource.Drawable._flagJapan,
+                RightFlag2 = Resource.Drawable._flagEmpty,
+                RightFlag3 = Resource.Drawable._flagEmpty,
+                VehicleType1 = Resource.Drawable._plane,
+                VehicleType2 = Resource.Drawable._tank
+            };
+            levels.Add(level);
+
+
+            level = new Level
+            {
+                Number = 109,
+                LevelName = "Only Italy",
+                LevelScoreEarned = prefs.GetInt("SScoreLevel109", 0),
+                LevelTotalScore = 20,
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked109", false),
+                Map = Resource.Drawable._mapItalia,
+                LeftFlag1 = Resource.Drawable._flagItaly,
+                LeftFlag2 = Resource.Drawable._flagEmpty,
+                LeftFlag3 = Resource.Drawable._flagEmpty,
+                RightFlag1 = Resource.Drawable._flagItaly,
+                RightFlag2 = Resource.Drawable._flagEmpty,
+                RightFlag3 = Resource.Drawable._flagEmpty,
+                VehicleType1 = Resource.Drawable._plane,
+                VehicleType2 = Resource.Drawable._tank
+            };
+            levels.Add(level);
+
+
+            level = new Level
+            {
+                Number = 110,
+                LevelName = "Only France",
+                LevelScoreEarned = prefs.GetInt("SScoreLevel110", 0),
+                LevelTotalScore = 20,
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked110", false),
+                Map = Resource.Drawable._mapMajinotLine,
+                LeftFlag1 = Resource.Drawable._flagFrance,
+                LeftFlag2 = Resource.Drawable._flagEmpty,
+                LeftFlag3 = Resource.Drawable._flagEmpty,
+                RightFlag1 = Resource.Drawable._flagFrance,
+                RightFlag2 = Resource.Drawable._flagEmpty,
+                RightFlag3 = Resource.Drawable._flagEmpty,
+                VehicleType1 = Resource.Drawable._plane,
+                VehicleType2 = Resource.Drawable._tank
+            };
+            levels.Add(level);
+
+
+            level = new Level
+            {
                 Number = 111,
-                LevelName = "Before WWII",
+                LevelName = "Only Sweden",
                 LevelScoreEarned = prefs.GetInt("SScoreLevel111", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked111", false),
+                Map = Resource.Drawable._mapMajinotLine,
+                LeftFlag1 = Resource.Drawable._flagSweden,
+                LeftFlag2 = Resource.Drawable._flagEmpty,
+                LeftFlag3 = Resource.Drawable._flagEmpty,
+                RightFlag1 = Resource.Drawable._flagSweden,
+                RightFlag2 = Resource.Drawable._flagEmpty,
+                RightFlag3 = Resource.Drawable._flagEmpty,
+                VehicleType1 = Resource.Drawable._plane,
+                VehicleType2 = Resource.Drawable._tank
+            };
+            levels.Add(level);
+
+
+            level = new Level
+            {
+                Number = 112,
+                LevelName = "Before WWII",
+                LevelScoreEarned = prefs.GetInt("SScoreLevel112", 0),
+                LevelTotalScore = 20,
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked112", false),
                 Map = Resource.Drawable._mapSmolensk,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagGermany,
@@ -1070,11 +1064,11 @@ namespace WarThunderQuiz.GameData
 
             level = new Level
             {
-                Number = 112,
+                Number = 113,
                 LevelName = "WWII",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel112", 0),
+                LevelScoreEarned = prefs.GetInt("SScoreLevel113", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked112", false),
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked113", false),
                 Map = Resource.Drawable._mapBerlin,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagBritain,
@@ -1090,11 +1084,11 @@ namespace WarThunderQuiz.GameData
 
             level = new Level
             {
-                Number = 113,
+                Number = 114,
                 LevelName = "Cold War",
-                LevelScoreEarned = prefs.GetInt("SScoreLevel113", 0),
+                LevelScoreEarned = prefs.GetInt("SScoreLevel114", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked113", false),
+                LevelUnlocked = prefs.GetBoolean("LevelUnlocked114", false),
                 Map = Resource.Drawable._mapSeaTerminal,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagBritain,
