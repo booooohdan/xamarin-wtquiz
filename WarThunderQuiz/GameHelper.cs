@@ -1,22 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 using Android.Gms.Common;
 using Android.Gms.Common.Apis;
 using Android.Gms.Games;
 using Android.Gms.Games.Achievement;
 using Android.Gms.Games.LeaderBoard;
-using Java.Interop;
 using System.Threading.Tasks;
 using Android.Accounts;
-using Android.Gms.Auth.Api.SignIn;
 using Android.Preferences;
 
 namespace GooglePlay.Services.Helpers
@@ -176,6 +169,7 @@ namespace GooglePlay.Services.Helpers
         /// <summary>
         /// Sign out of Google Play and make sure we don't try to auto sign in on the next startup
         /// </summary>
+        [Obsolete]
         public void SignOut()
         {
 
@@ -327,6 +321,7 @@ namespace GooglePlay.Services.Helpers
 
         #region IGoogleApiClientConnectionCallbacks implementation
 
+        [Obsolete]
         public void OnConnected(Android.OS.Bundle connectionHint)
         {
             resolving = false;

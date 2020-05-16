@@ -1029,7 +1029,7 @@ namespace WarThunderQuiz.GameData
                 LevelScoreEarned = prefs.GetInt("SScoreLevel111", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked111", false),
-                Map = Resource.Drawable._mapMajinotLine,
+                Map = Resource.Drawable._mapFinland,
                 LeftFlag1 = Resource.Drawable._flagSweden,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
                 LeftFlag3 = Resource.Drawable._flagEmpty,

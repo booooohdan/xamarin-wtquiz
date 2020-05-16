@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
-using Android.Gms.Auth.Api;
-using Android.Gms.Auth.Api.SignIn;
 using Android.Gms.Common;
 using Android.Gms.Common.Apis;
 using Android.OS;
 using Android.Preferences;
-using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
@@ -21,7 +15,6 @@ using GooglePlay.Services.Helpers;
 namespace WarThunderQuiz
 {
     [Activity(Theme = "@style/AppTheme.NoActionBar", ScreenOrientation = ScreenOrientation.Portrait)]
-
     class Settings : AppCompatActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
         Context context;
@@ -36,17 +29,16 @@ namespace WarThunderQuiz
             SetContentView(Resource.Layout.Settings);
             context = ApplicationContext;
 
-            #region Прив'язкаView
+            #region View Linking
             signInButton = FindViewById<SignInButton>(Resource.Id.signInButton);
             signOutButton = FindViewById<Button>(Resource.Id.signOutButton);
             ButtonReddit = FindViewById<Button>(Resource.Id.buttonReddit);
             ButtonEmail = FindViewById<Button>(Resource.Id.buttonEMail);
             RatingBar = FindViewById<RatingBar>(Resource.Id.ratingBar);
 
-
             #endregion
 
-            #region Оголошення подій
+            #region Events listener
             signInButton.Click += SignInButton_Click;
             signOutButton.Click += SignOutButton_Click;
             ButtonReddit.Click += ButtonReddit_Click;
@@ -84,7 +76,6 @@ namespace WarThunderQuiz
             StartActivity(new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://play.google.com/store/apps/details?id=com.wave.wtquiz")));
         }
 
-        #region GoogleGames
         private void SignInButton_Click(object sender, EventArgs e)
         {
             if (CheckSelfPermission(Manifest.Permission.GetAccounts) == Permission.Granted)
@@ -111,6 +102,8 @@ namespace WarThunderQuiz
                 signOutButton.Visibility = ViewStates.Gone;
             }
         }
+        
+        #region GoogleGames
 
         private void InitializeServices()
         {

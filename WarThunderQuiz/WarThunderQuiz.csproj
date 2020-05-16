@@ -88,6 +88,8 @@
     <Compile Include="GameData\Vehicle.cs" />
     <Compile Include="GameHelper.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="RecyclerViews\RecyclerViewAdapter.cs" />
+    <Compile Include="RecyclerViews\RecyclerViewHolder.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
@@ -101,7 +103,7 @@
     <AndroidResource Include="Resources\font\cavolini.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\MainMenu.axml">
+    <AndroidResource Include="Resources\layout\MainMenu.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
@@ -169,12 +171,12 @@
     <AndroidResource Include="Resources\drawable\_ShapeButton.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ChooseVehicleMenu.axml">
+    <AndroidResource Include="Resources\layout\ChooseVehicleMenu.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ClassicGameMode.axml">
+    <AndroidResource Include="Resources\layout\ClassicGameMode.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -194,12 +196,12 @@
     <AndroidResource Include="Resources\drawable\_ShowResultMenuBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ShowResult.axml">
+    <AndroidResource Include="Resources\layout\ShowResult.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\_alertDialogBackToMenu.axml">
+    <AndroidResource Include="Resources\layout\_alertDialogBackToMenu.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -1209,9 +1211,6 @@
     <AndroidResource Include="Resources\drawable\_avatarFlagDefault.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\_MMProfileButton.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\_MMSettingsButton.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -1227,7 +1226,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Settings.axml">
+    <AndroidResource Include="Resources\layout\Settings.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -1901,7 +1900,7 @@
     <AndroidResource Include="Resources\drawable\z_1007_bis_serie3.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\_alertDialogRewardVideo.axml">
+    <AndroidResource Include="Resources\layout\_alertDialogRewardVideo.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -1909,7 +1908,7 @@
     <AndroidResource Include="Resources\drawable\_videoIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\_levelCardView.axml">
+    <AndroidResource Include="Resources\layout\_levelCardView.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -1997,7 +1996,7 @@
     <AndroidResource Include="Resources\drawable\tiger_had_france.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\_alertDialogTextWithButton.axml">
+    <AndroidResource Include="Resources\layout\_alertDialogTextWithButton.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
