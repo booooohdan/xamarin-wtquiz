@@ -14,7 +14,7 @@ using Android.Preferences;
 
 namespace WarThunderQuiz
 {
-    [Activity(Label = "WT Quiz (beta)", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, Icon = "@drawable/_Icon", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "WT Quiz", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, Icon = "@drawable/_Icon", ScreenOrientation = ScreenOrientation.Portrait)]
     class MainActivity : AppCompatActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
         Button _MMClassicModeButton, _MMHardcoreModeButton, _MMEveryDayModeButton;

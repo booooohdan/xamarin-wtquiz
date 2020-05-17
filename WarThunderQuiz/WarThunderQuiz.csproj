@@ -78,8 +78,11 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdListener.cs" />
     <Compile Include="ChooseVehicle.cs" />
     <Compile Include="ClassicGameMode.cs" />
+    <Compile Include="ClassicGameModeAds.cs" />
+    <Compile Include="ClassicGameModeLevels.cs" />
     <Compile Include="GameData\Level.cs" />
     <Compile Include="GameData\LevelCollection.cs" />
     <Compile Include="GameData\PlaneCollection.cs" />
