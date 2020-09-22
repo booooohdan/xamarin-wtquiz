@@ -4,10 +4,10 @@ using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
+using AndroidX.AppCompat.App;
+using AndroidX.RecyclerView.Widget;
 using WarThunderQuiz.GameData;
 using WarThunderQuiz.RecyclerViews;
 
@@ -95,8 +95,8 @@ namespace WarThunderQuiz
             _TWBLabelTextView = mview.FindViewById<TextView>(Resource.Id.TWBLabelTextView);
             _TWBAlertTextView = mview.FindViewById<TextView>(Resource.Id.TWBAlertTextView);
             _ButtonOk = mview.FindViewById<Button>(Resource.Id.TWBButton);
-            _TWBLabelTextView.SetText("Battle is locked", TextView.BufferType.Normal);
-            _TWBAlertTextView.SetText("You need to finish previous batle", TextView.BufferType.Normal);
+            _TWBLabelTextView.SetText(context.Resources.GetString(Resource.String.battleLocked), TextView.BufferType.Normal);
+            _TWBAlertTextView.SetText(context.Resources.GetString(Resource.String.needToFinish), TextView.BufferType.Normal);
             _ButtonOk.SetText("Ok", TextView.BufferType.Normal);
         }
 

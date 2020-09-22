@@ -4,13 +4,13 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Android.Gms.Common.Apis;
 using Android.Gms.Common;
 using GooglePlay.Services.Helpers;
 using Android.Preferences;
+using AndroidX.AppCompat.App;
 
 namespace WarThunderQuiz
 {
@@ -59,7 +59,7 @@ namespace WarThunderQuiz
             ISharedPreferencesEditor editor = prefs.Edit();
 
             STotalPoints = prefs.GetInt("SavedTotalPoints", 0);
-            NickName = prefs.GetString("nickname", "Not logged");
+            NickName = prefs.GetString("nickname", context.Resources.GetString(Resource.String.notLogged));
 
             #endregion
 
@@ -130,8 +130,8 @@ namespace WarThunderQuiz
                 _TWBLabelTextView = mview.FindViewById<TextView>(Resource.Id.TWBLabelTextView);
                 _TWBAlertTextView = mview.FindViewById<TextView>(Resource.Id.TWBAlertTextView);
                 _ButtonOk = mview.FindViewById<Button>(Resource.Id.TWBButton);
-                _TWBLabelTextView.SetText("You are not sign in Google Play", TextView.BufferType.Normal);
-                _TWBAlertTextView.SetText("Sign in?", TextView.BufferType.Normal);
+                _TWBLabelTextView.SetText(context.Resources.GetString(Resource.String.notSign), TextView.BufferType.Normal);
+                _TWBAlertTextView.SetText(context.Resources.GetString(Resource.String.sign), TextView.BufferType.Normal);
                 _ButtonOk.SetText("Ok", TextView.BufferType.Normal);
                 alertDialogAndroid.Show();
                 _ButtonOk.Click += _ButtonOk_Click;
@@ -155,8 +155,8 @@ namespace WarThunderQuiz
                 _TWBLabelTextView = mview.FindViewById<TextView>(Resource.Id.TWBLabelTextView);
                 _TWBAlertTextView = mview.FindViewById<TextView>(Resource.Id.TWBAlertTextView);
                 _ButtonOk = mview.FindViewById<Button>(Resource.Id.TWBButton);
-                _TWBLabelTextView.SetText("You are not sign in Google Play", TextView.BufferType.Normal);
-                _TWBAlertTextView.SetText("Sign in?", TextView.BufferType.Normal);
+                _TWBLabelTextView.SetText(context.Resources.GetString(Resource.String.notSign), TextView.BufferType.Normal);
+                _TWBAlertTextView.SetText(context.Resources.GetString(Resource.String.sign), TextView.BufferType.Normal);
                 _ButtonOk.SetText("Ok", TextView.BufferType.Normal);
                 alertDialogAndroid.Show();
                 _ButtonOk.Click += _ButtonOk_Click;

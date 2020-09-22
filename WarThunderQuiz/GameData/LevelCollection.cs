@@ -19,7 +19,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 1,
-                LevelName = "Annexation of Manchuria",
+                LevelName = context.Resources.GetString(Resource.String.levelManchuria),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel1", 0),
                 LevelTotalScore = 5,
                 LevelUnlocked = true,
@@ -38,7 +38,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 2,
-                LevelName = "Battle of Brunete",
+                LevelName = context.Resources.GetString(Resource.String.levelBrunete),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel2", 0),
                 LevelTotalScore = 5,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked2", false),
@@ -57,7 +57,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 3,
-                LevelName = "Battle of Teruel",
+                LevelName = context.Resources.GetString(Resource.String.levelTeruel),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel3", 0),
                 LevelTotalScore = 10,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked3", false),
@@ -76,7 +76,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 4,
-                LevelName = "Battle of the Ebro",
+                LevelName = context.Resources.GetString(Resource.String.levelEbro),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel4", 0),
                 LevelTotalScore = 10,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked4", false),
@@ -95,7 +95,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 5,
-                LevelName = "Battle of Lake Khasan",
+                LevelName = context.Resources.GetString(Resource.String.levelKhasan),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel5", 0),
                 LevelTotalScore = 10,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked5", false),
@@ -114,7 +114,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 6,
-                LevelName = "Battle of Nanking",
+                LevelName = context.Resources.GetString(Resource.String.levelNanking),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel6", 0),
                 LevelTotalScore = 10,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked6", false),
@@ -133,7 +133,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 7,
-                LevelName = "Battles of Khalkhin Gol",
+                LevelName = context.Resources.GetString(Resource.String.levelHalkinGol),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel7", 0),
                 LevelTotalScore = 10,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked7", false),
@@ -152,7 +152,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 8,
-                LevelName = "Battle of the Atlantic",
+                LevelName = context.Resources.GetString(Resource.String.levelAtlantic),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel8", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked8", false),
@@ -172,7 +172,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 9,
-                LevelName = "Battle of Dunkirk",
+                LevelName = context.Resources.GetString(Resource.String.levelDunkirk),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel9", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked9", false),
@@ -192,7 +192,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 10,
-                LevelName = "Battle of Britain",
+                LevelName = context.Resources.GetString(Resource.String.levelBritain),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel10", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked10", false),
@@ -212,7 +212,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 11,
-                LevelName = "Battle of Crete",
+                LevelName = context.Resources.GetString(Resource.String.levelCrete),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel11", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked11", false),
@@ -232,7 +232,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 12,
-                LevelName = "Operation Barbarossa",
+                LevelName = context.Resources.GetString(Resource.String.levelBarbarossa),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel12", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked12", false),
@@ -252,7 +252,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 13,
-                LevelName = "Arctic convoys",
+                LevelName = context.Resources.GetString(Resource.String.levelArctic),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel13", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked13", false),
@@ -272,7 +272,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 14,
-                LevelName = "Siege of Leningrad",
+                LevelName = context.Resources.GetString(Resource.String.levelLeningrad),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel14", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked14", false),
@@ -292,7 +292,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 15,
-                LevelName = "Battle of Moscow",
+                LevelName = context.Resources.GetString(Resource.String.levelMoscow),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel15", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked15", false),
@@ -312,7 +312,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 16,
-                LevelName = "Attack on Pearl Harbor",
+                LevelName = context.Resources.GetString(Resource.String.levelPerlHarbor),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel16", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked16", false),
@@ -332,7 +332,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 17,
-                LevelName = "Second Battle of Kharkov",
+                LevelName = context.Resources.GetString(Resource.String.levelKharkiv),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel17", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked17", false),
@@ -352,7 +352,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 18,
-                LevelName = "Battle of the Coral Sea",
+                LevelName = context.Resources.GetString(Resource.String.levelCoralSea),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel18", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked18", false),
@@ -372,7 +372,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 19,
-                LevelName = "Battle of Midway",
+                LevelName = context.Resources.GetString(Resource.String.levelMidway),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel19", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked19", false),
@@ -392,7 +392,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 20,
-                LevelName = "Battle of Stalingrad",
+                LevelName = context.Resources.GetString(Resource.String.levelStalingrad),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel20", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked20", false),
@@ -412,7 +412,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 21,
-                LevelName = "Second Battle of El Alamein",
+                LevelName = context.Resources.GetString(Resource.String.levelElAlamein),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel21", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked21", false),
@@ -432,7 +432,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 22,
-                LevelName = "Operation Torch",
+                LevelName = context.Resources.GetString(Resource.String.levelTorch),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel22", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked22", false),
@@ -452,7 +452,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 23,
-                LevelName = "Battle of Kursk",
+                LevelName = context.Resources.GetString(Resource.String.levelKursk),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel23", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked23", false),
@@ -472,7 +472,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 24,
-                LevelName = "Battle of Anzio",
+                LevelName = context.Resources.GetString(Resource.String.levelAnzio),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel24", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked24", false),
@@ -492,7 +492,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 25,
-                LevelName = "Battle of Monte Cassino",
+                LevelName = context.Resources.GetString(Resource.String.levelCasino),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel25", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked25", false),
@@ -512,7 +512,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 26,
-                LevelName = "Battle of the Bulge",
+                LevelName = context.Resources.GetString(Resource.String.levelBulge),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel26", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked26", false),
@@ -532,7 +532,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 27,
-                LevelName = "Battle of the Philippine Sea",
+                LevelName = context.Resources.GetString(Resource.String.levelPhillipinesSea),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel27", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked27", false),
@@ -552,7 +552,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 28,
-                LevelName = "D-Day",
+                LevelName = context.Resources.GetString(Resource.String.levelDDay),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel28", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked28", false),
@@ -572,7 +572,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 29,
-                LevelName = "Battle of Leyte Gulf",
+                LevelName = context.Resources.GetString(Resource.String.levelLeiteGuf),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel29", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked29", false),
@@ -592,7 +592,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 30,
-                LevelName = "Battle of Luzon",
+                LevelName = context.Resources.GetString(Resource.String.levelLuzon),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel30", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked30", false),
@@ -612,7 +612,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 31,
-                LevelName = "Battle of Berlin",
+                LevelName = context.Resources.GetString(Resource.String.levelBerlin),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel31", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked31", false),
@@ -632,7 +632,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 32,
-                LevelName = "Battle of Iwo Jima",
+                LevelName = context.Resources.GetString(Resource.String.levelIwoJima),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel32", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked32", false),
@@ -652,7 +652,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 33,
-                LevelName = "Battle of Okinawa",
+                LevelName = context.Resources.GetString(Resource.String.levelOkinawa),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel33", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked33", false),
@@ -672,7 +672,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 34,
-                LevelName = "Soviet Japanese War",
+                LevelName = context.Resources.GetString(Resource.String.levelSovietJapan),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel34", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked34", false),
@@ -692,7 +692,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 35,
-                LevelName = "Battle of Balikpapan",
+                LevelName = context.Resources.GetString(Resource.String.levelBalikapkan),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel35", 0),
                 LevelTotalScore = 15,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked35", false),
@@ -712,7 +712,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 36,
-                LevelName = "Korean War",
+                LevelName = context.Resources.GetString(Resource.String.levelKorea),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel36", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked36", false),
@@ -732,7 +732,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 37,
-                LevelName = "Vietnam War",
+                LevelName = context.Resources.GetString(Resource.String.levelVietnam),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel37", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked37", false),
@@ -752,7 +752,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 38,
-                LevelName = "Laotian Civil War",
+                LevelName = context.Resources.GetString(Resource.String.levelLaotin),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel38", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked38", false),
@@ -772,7 +772,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 39,
-                LevelName = "Cambodian Civil War",
+                LevelName = context.Resources.GetString(Resource.String.levelCambodian),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel39", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked39", false),
@@ -792,7 +792,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 40,
-                LevelName = "Yom Kippur War",
+                LevelName = context.Resources.GetString(Resource.String.levelYomKipur),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel40", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = prefs.GetBoolean("LevelUnlocked40", false),
@@ -825,7 +825,7 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 101,
-                LevelName = "Only Aviation",
+                LevelName = context.Resources.GetString(Resource.String.levelAviation),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel101", 0),
                 LevelTotalScore = 20,
                 LevelUnlocked = true,
@@ -845,10 +845,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 102,
-                LevelName = "Only Ground Forces",
+                LevelName = context.Resources.GetString(Resource.String.levelTanks),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel102", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked102", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapAshRiver,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagGermany,
@@ -865,10 +865,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 103,
-                LevelName = "Only Naval Forces",
+                LevelName = context.Resources.GetString(Resource.String.levelShips),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel103", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked103", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapCoralSea,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagGermany,
@@ -885,10 +885,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 104,
-                LevelName = "Only USA",
+                LevelName = context.Resources.GetString(Resource.String.levelUSA),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel104", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked104", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapAmericanDesert,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
@@ -905,10 +905,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 105,
-                LevelName = "Only Germany",
+                LevelName = context.Resources.GetString(Resource.String.levelGermany),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel105", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked105", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapBerlin,
                 LeftFlag1 = Resource.Drawable._flagGermany,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
@@ -925,10 +925,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 106,
-                LevelName = "Only USSR",
+                LevelName = context.Resources.GetString(Resource.String.levelUSSR),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel106", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked106", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapKursk,
                 LeftFlag1 = Resource.Drawable._flagUSSR,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
@@ -945,10 +945,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 107,
-                LevelName = "Only UK",
+                LevelName = context.Resources.GetString(Resource.String.levelUK),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel107", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked107", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapBritain,
                 LeftFlag1 = Resource.Drawable._flagBritain,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
@@ -965,10 +965,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 108,
-                LevelName = "Only Japan",
+                LevelName = context.Resources.GetString(Resource.String.levelJapan),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel108", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked108", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapJapan,
                 LeftFlag1 = Resource.Drawable._flagJapan,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
@@ -985,10 +985,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 109,
-                LevelName = "Only Italy",
+                LevelName = context.Resources.GetString(Resource.String.levelItaly),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel109", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked109", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapItalia,
                 LeftFlag1 = Resource.Drawable._flagItaly,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
@@ -1005,10 +1005,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 110,
-                LevelName = "Only France",
+                LevelName = context.Resources.GetString(Resource.String.levelFrance),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel110", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked110", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapMajinotLine,
                 LeftFlag1 = Resource.Drawable._flagFrance,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
@@ -1025,10 +1025,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 111,
-                LevelName = "Only Sweden",
+                LevelName = context.Resources.GetString(Resource.String.levelSweden),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel111", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked111", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapFinland,
                 LeftFlag1 = Resource.Drawable._flagSweden,
                 LeftFlag2 = Resource.Drawable._flagEmpty,
@@ -1045,10 +1045,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 112,
-                LevelName = "Before WWII",
+                LevelName = context.Resources.GetString(Resource.String.levelBefWWI),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel112", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked112", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapSmolensk,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagGermany,
@@ -1065,10 +1065,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 113,
-                LevelName = "WWII",
+                LevelName = context.Resources.GetString(Resource.String.levelWWI),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel113", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked113", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapBerlin,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagBritain,
@@ -1085,10 +1085,10 @@ namespace WarThunderQuiz.GameData
             level = new Level
             {
                 Number = 114,
-                LevelName = "Cold War",
+                LevelName = context.Resources.GetString(Resource.String.levelColdWar),
                 LevelScoreEarned = prefs.GetInt("SScoreLevel114", 0),
                 LevelTotalScore = 20,
-                LevelUnlocked = prefs.GetBoolean("LevelUnlocked114", false),
+                LevelUnlocked = true,
                 Map = Resource.Drawable._mapSeaTerminal,
                 LeftFlag1 = Resource.Drawable._flagUSA,
                 LeftFlag2 = Resource.Drawable._flagBritain,

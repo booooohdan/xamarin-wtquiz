@@ -6,7 +6,6 @@ using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
@@ -17,7 +16,7 @@ using Android.Gms.Ads.Reward;
 using System.Threading;
 using Android.Preferences;
 using Android.Util;
-
+using AndroidX.AppCompat.App;
 
 namespace WarThunderQuiz
 {

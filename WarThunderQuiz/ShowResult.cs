@@ -6,7 +6,6 @@ using Android.Gms.Common;
 using Android.Gms.Common.Apis;
 using Android.OS;
 using Android.Preferences;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using GooglePlay.Services.Helpers;
@@ -14,6 +13,7 @@ using Android.Util;
 using Android.Gms.Ads;
 using Android.Gms.Ads.Reward;
 using System.Collections.Generic;
+using AndroidX.AppCompat.App;
 
 namespace WarThunderQuiz
 {
@@ -28,6 +28,7 @@ namespace WarThunderQuiz
         GameHelper helper;
         int SRLevelNumber, SRTotalScore, points, GlobalPoints;
         string SRBattleName;
+        Android.App.AlertDialog alertDialogAndroid;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -52,6 +53,7 @@ namespace WarThunderQuiz
             SetGamePointsToPreferedShares(prefs, editor);
             SetLabelDependingPoints();
             InitializeServices();
+            RateApp();
 
             _SRBattleNameTextView.SetText(SRBattleName, TextView.BufferType.Normal);
             _SRLevelNumberTextView.SetText(SRLevelNumber.ToString(), TextView.BufferType.Normal);
@@ -61,6 +63,44 @@ namespace WarThunderQuiz
             _SRMainMenuButton.Click += _SRMainMenuButton_Click;
             SRDoublePointsButtonClick.Click += SRDoublePointsButton_Click;
         }
+
+        private void RateApp()
+        {
+            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(context);
+            ISharedPreferencesEditor editor = prefs.Edit();
+
+            var showRateAlert = prefs.GetInt("rateAlert", 1);
+            showRateAlert++;
+            editor.PutInt("rateAlert", showRateAlert);
+            editor.Apply();
+
+            if (showRateAlert == 7 || showRateAlert == 15)
+                CallAlert();
+        }
+
+        private void CallAlert()
+        {
+            var layoutInflater = LayoutInflater.From(this);
+            var mview = layoutInflater.Inflate(Resource.Layout._alertRateAppDialog, null);
+            var alertDialogBuilder = new Android.App.AlertDialog.Builder(this);
+            alertDialogBuilder.SetView(mview);
+            alertDialogAndroid = alertDialogBuilder.Create();
+            alertDialogAndroid.Show();
+            alertDialogAndroid.SetCanceledOnTouchOutside(false);
+            alertDialogAndroid.SetCancelable(false);
+            var rateButtonYes = mview.FindViewById<Button>(Resource.Id.buttonYes);
+            var rateButtonNo = mview.FindViewById<Button>(Resource.Id.buttonNo);
+            rateButtonNo.Click += (s, e) => alertDialogAndroid.Dismiss();
+            rateButtonYes.Click += RateButtonYes_Click;
+        }
+
+        private void RateButtonYes_Click(object sender, EventArgs e)
+        {
+            alertDialogAndroid.Dismiss();
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+                .Parse("https://play.google.com/store/apps/details?id=com.wave.wtquiz")));
+        }
+
 
         private void SetGamePointsToPreferedShares(ISharedPreferences prefs, ISharedPreferencesEditor editor)
         {
@@ -84,13 +124,13 @@ namespace WarThunderQuiz
 
             if (points >= SRTotalScore - 1)
             {
-                _SRCompletedTextView.SetText(" completed", TextView.BufferType.Normal);
-                _SRNextLevelButton.SetText("Next Level", TextView.BufferType.Normal);
+                _SRCompletedTextView.SetText(context.Resources.GetString(Resource.String.completed), TextView.BufferType.Normal);
+                _SRNextLevelButton.SetText(context.Resources.GetString(Resource.String.nextLevel), TextView.BufferType.Normal);
             }
             else
             {
-                _SRCompletedTextView.SetText(" failed", TextView.BufferType.Normal);
-                _SRNextLevelButton.SetText("Retry", TextView.BufferType.Normal);
+                _SRCompletedTextView.SetText(context.Resources.GetString(Resource.String.failed), TextView.BufferType.Normal);
+                _SRNextLevelButton.SetText(context.Resources.GetString(Resource.String.retry), TextView.BufferType.Normal);
             }
 
             var leveIds = new List<int>() { 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113 };
@@ -121,6 +161,7 @@ namespace WarThunderQuiz
         private void SRDoublePointsButton_Click(object sender, EventArgs e)
         {
             ShowRewardedVideo();
+            SRDoublePointsButtonClick.Visibility = Android.Views.ViewStates.Gone;
         }
 
 
@@ -184,11 +225,15 @@ namespace WarThunderQuiz
             Toast.MakeText(this, "OnRewardedVideoCompleted", ToastLength.Short).Show();
         }
 
-        public void ShowRewardedVideo()
+        public async void ShowRewardedVideo()
         {
             if (SRRewardedVideoAd.IsLoaded)
             {
                 SRRewardedVideoAd.Show();
+                await System.Threading.Tasks.Task.Delay(5000);
+                points = points * 2;
+                SetLabelDependingPoints();
+                SetScore();
             }
             else
             {

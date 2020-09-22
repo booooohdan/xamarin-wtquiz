@@ -7,9 +7,9 @@ using Android.Gms.Common;
 using Android.Gms.Common.Apis;
 using Android.OS;
 using Android.Preferences;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using AndroidX.AppCompat.App;
 using GooglePlay.Services.Helpers;
 
 namespace WarThunderQuiz
@@ -19,10 +19,12 @@ namespace WarThunderQuiz
     {
         Context context;
         SignInButton signInButton;
-        Button signOutButton, ButtonReddit, ButtonEmail;
-        RatingBar RatingBar;
+        Button signOutButton;
         GameHelper helper;
-
+        EditText editMessage;
+        Button buttonSend, buttonReddit, buttonVK;
+        ImageButton buttonRefWOTQuiz, buttonRefVersus, buttonRefInsider;
+        RatingBar ratingBar;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,48 +34,79 @@ namespace WarThunderQuiz
             #region View Linking
             signInButton = FindViewById<SignInButton>(Resource.Id.signInButton);
             signOutButton = FindViewById<Button>(Resource.Id.signOutButton);
-            ButtonReddit = FindViewById<Button>(Resource.Id.buttonReddit);
-            ButtonEmail = FindViewById<Button>(Resource.Id.buttonEMail);
-            RatingBar = FindViewById<RatingBar>(Resource.Id.ratingBar);
+
+            editMessage = FindViewById<EditText>(Resource.Id.editMessage);
+            buttonRefInsider = FindViewById<ImageButton>(Resource.Id.buttonRefWTInsider);
+            buttonRefVersus = FindViewById<ImageButton>(Resource.Id.buttonRefVersus);
+            buttonRefWOTQuiz = FindViewById<ImageButton>(Resource.Id.buttonRefWTQuiz);
+            ratingBar = FindViewById<RatingBar>(Resource.Id.ratingBar);
+            buttonSend = FindViewById<Button>(Resource.Id.buttonSend);
+            buttonReddit = FindViewById<Button>(Resource.Id.buttonReddit);
+            buttonVK = FindViewById<Button>(Resource.Id.buttonVK);
+
+            buttonSend.Click += ButtonSend_Click;
+            buttonReddit.Click += ButtonReddit_Click;
+            buttonVK.Click += ButtonVK_Click;
+            ratingBar.RatingBarChange += RatingBar_RatingBarChange;
+            buttonRefWOTQuiz.Click += ButtonRefWTQuiz_Click;
+            buttonRefVersus.Click += ButtonRefVersus_Click; ;
+            buttonRefInsider.Click += ButtonRefInsider_Click; ;
 
             #endregion
 
             #region Events listener
             signInButton.Click += SignInButton_Click;
             signOutButton.Click += SignOutButton_Click;
-            ButtonReddit.Click += ButtonReddit_Click;
-            ButtonEmail.Click += ButtonEmail_Click;
-            RatingBar.RatingBarChange += RatingBar_RatingBarChange;
 
             #endregion
 
             InitializeServices();
         }
 
-        private void ButtonReddit_Click(object sender, EventArgs e)
+        private void ButtonRefInsider_Click(object sender, EventArgs e)
         {
-            var uri = Android.Net.Uri.Parse("https://www.reddit.com/r/wave_app/");
-            var intent = new Intent(Intent.ActionView, uri);
-            StartActivity(intent);
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+              .Parse("https://play.google.com/store/apps/details?id=com.wtwave.wtinsider")));
         }
 
-        private void ButtonEmail_Click(object sender, EventArgs e)
+        private void ButtonRefVersus_Click(object sender, EventArgs e)
         {
-            var EditTo = "waveappfeedback@gmail.com";
-            var EditSubject = "WT Quiz Feedback";
-            var EditMessage = "";
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+              .Parse("https://play.google.com/store/apps/details?id=com.wave.wtversus")));
+        }
 
-            Intent email = new Intent(Intent.ActionSend);
-            email.PutExtra(Intent.ExtraEmail, new string[] { EditTo.ToString() });
-            email.PutExtra(Intent.ExtraSubject, new string[] { EditSubject.ToString() });
-            email.PutExtra(Intent.ExtraText, new string[] { EditMessage.ToString() });
-            email.SetType("message/rfc822");
-            StartActivity(Intent.CreateChooser(email, "Choose your email client:"));
+        private void ButtonRefWTQuiz_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+              .Parse("https://play.google.com/store/apps/details?id=com.wave.wotquiz")));
         }
 
         private void RatingBar_RatingBarChange(object sender, RatingBar.RatingBarChangeEventArgs e)
         {
-            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://play.google.com/store/apps/details?id=com.wave.wtquiz")));
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+                .Parse("https://play.google.com/store/apps/details?id=com.wave.wtquiz")));
+        }
+
+        private void ButtonVK_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+               .Parse("https://www.vk.com/waveapp/")));
+        }
+
+        private void ButtonReddit_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+                 .Parse("https://www.reddit.com/r/wave_app/")));
+        }
+
+        private void ButtonSend_Click(object sender, EventArgs e)
+        {
+            Intent email = new Intent(Intent.ActionSend);
+            email.PutExtra(Intent.ExtraEmail, new string[] { "waveappfeedback@gmail.com" });
+            email.PutExtra(Intent.ExtraSubject, "From WT Quiz");
+            email.PutExtra(Intent.ExtraText, editMessage.Text.ToString());
+            email.SetType("message/rfc822");
+            StartActivity(Intent.CreateChooser(email, "Choose your email client:"));
         }
 
         private void SignInButton_Click(object sender, EventArgs e)
@@ -102,7 +135,7 @@ namespace WarThunderQuiz
                 signOutButton.Visibility = ViewStates.Gone;
             }
         }
-        
+
         #region GoogleGames
 
         private void InitializeServices()
